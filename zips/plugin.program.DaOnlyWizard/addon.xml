@@ -2,7 +2,7 @@
 <addon id="plugin.program.DaOnlyWizard" name="DaOnlyWizard" version="5.0.0" provider-name="DaButcher">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="repository.dab" version="1.0.0"/>
+	<import addon="repository.dab" version="1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
