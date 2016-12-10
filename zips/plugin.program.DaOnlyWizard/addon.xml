@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.DaOnlyWizard" name="DaOnlyWizard" version="5.0.0" provider-name="DaButcher">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="repository.dab" version="1.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">DaOnlyWizard</summary>
+    <description lang="en">DaButcher (DaB) wizard that offers all of my builds and also a few from my friends. This wizard is FREE and not to be sold or profited from. Big thx goes out to Aftermath wizard for the great wizard.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
