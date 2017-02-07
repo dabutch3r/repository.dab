@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.DaOnlyWizard" name="DaOnlyWizard" version="5.0.1" provider-name="DaButcher">
+<addon id="plugin.program.DaOnlyWizard" name="DaOnlyWizard" version="5.0.2" provider-name="DaButcher">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="repository.dab" version="1.0"/>
