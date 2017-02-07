@@ -1,3 +1,4 @@
+changed color
 Coming Soon: v0.1.7
 -Install build without killing kodi
 -Ability to install minor updates for builds
