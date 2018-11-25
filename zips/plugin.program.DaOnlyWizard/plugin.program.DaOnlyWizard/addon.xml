@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.DaOnlyWizard" name="DaOnlyWizard" version="5.1.3" provider-name="DaButcher">
+<addon id="plugin.program.DaOnlyWizard" name="[COLOR red]DaOnlyWizard[/COLOR]" version="5.5.5" provider-name="DaButcher">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>executable</provides>
+        <provides>executable</provides>
   </extension>
   <extension point="xbmc.service" library="startup.py" start="startup" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">DaOnlyWizard</summary>
-    <description lang="en">Da Only Wizard you need to get DaButcher builds and some of my friends builds. I have included some APK options in the wizard. Special thanks to Surfacingx for creating and maintaining Aftermath Wizard.</description>
+    <description lang="en">Welcome to DaButchers DaOnlyWizard, the only place to get DaButchers Builds Thanks whufclee at NaN, GUYS at TI, Brackets for the app installer!! RomanVM for the PyXBMCt libs. Fire TV Guru for the PyXBMCt layout  Also a very special Thanks to Surfacingx for the code used in this add-on.</description>
     <platform>all</platform>
   </extension>
 </addon>
