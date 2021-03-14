@@ -1,0 +1,44 @@
+<xml>
+  <dir>
+    <title>Addon Reviews</title>
+    <thumbnail>special://home/addons/plugin.video.cocodab/icon.png</thumbnail>
+    <link>http://dabutcher.org/coco/addon_main.xml</link>
+    <summary>Looking for a ADDON-ON ?
+    This section I look around and see what sets each addon apart from others. I also include URL and Repo info in notes of videos
+    If you want your addon added to list find me on TG</summary>
+  </dir>
+
+<dir>
+    <title>Build Reviews</title>
+    <link>http://dabutcher.org/coco/builds_main.xml</link>
+    <thumbnail>special://home/addons/plugin.video.cocodab/icon.png</thumbnail>
+    <summary>Looking for a BUILD ?
+    This section is dedicated to looking at some of the best and coolest builds out there. I also include Wizard and Repo info in notes of video
+    If you want your build added to list find me on TG</summary>
+  </dir>
+
+  <dir>
+    <title>Streaming Matters</title>
+    <link>http://dabutcher.org/coco/sm_main.xml</link>
+    <thumbnail>special://home/addons/plugin.video.cocodab/icon.png</thumbnail>
+    <summary>Looking for Streaming Info?
+    This is some of my SM shows that are on YouTube. I cover all kinds of subjects to help you cut the cord and save money</summary>
+  </dir>
+
+<dir>
+    <title>Dabs Must Haves</title>
+    <link>http://dabutcher.org/coco/help_main.xml</link>
+    <thumbnail>special://home/addons/plugin.video.cocodab/icon.png</thumbnail>
+    <summary>Looking for some things to make your Streaming Better ?
+    This section i have some of my best addon/apks to make your streaming better. If you want your addon/apk added to list find me on TG</summary>
+  </dir>
+
+  <dir>
+    <title>Tips And Tricks</title>
+    <link>http://dabutcher.org/coco/tips_main.xml</link>
+    <thumbnail>special://home/addons/plugin.video.cocodab/icon.png</thumbnail>
+    <summary>Want to stream like PRO ?
+    This scetion is dedicated to give you the inside tips and tricks to make your streaming life run smooth. Some of these things are not talked or taught anywhere else but my channel</summary>
+  </dir>
+
+</xml>

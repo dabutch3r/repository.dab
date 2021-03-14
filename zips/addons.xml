@@ -15,6 +15,53 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.cocodab" name="CoCoDaB" version="1.0.0" provider-name="That Bearded Guy">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" version="0.2.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Help videos from DaButchers cocoscope. </summary>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+  </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.dabscope"
+	   name="DABscope"
+	   version="1.0.0"
+	   provider-name="DaButcher">
+  <requires>
+
+	<import addon="script.module.requests"/>
+
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Home of DaButcher's Videos</summary>
+    <description lang="en">Home of DaButcher's Videos. I work to educate ppl and make their streaming experience better. Im not here to cash in on the cutting cable craze just to teach ppl how to do it themselves and get the most out of their set up
+      Thank you the Creator of this addon for me</description>
+    <platform>all</platform>
+	<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="repository.dab" name="DaButcher Repository" version="1.1" provider-name="DaButcher">
 	<extension point="xbmc.addon.repository" name="DaB Repository">
 		<info compressed="false">https://raw.githubusercontent.com/DaButch3r/repository.dab/master/zips/addons.xml</info>
