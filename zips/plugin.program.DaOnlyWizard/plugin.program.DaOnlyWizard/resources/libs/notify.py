@@ -675,7 +675,7 @@ def firstRun():
 	class MyWindow(xbmcgui.WindowXMLDialog):
 		def __init__(self, *args, **kwargs):
 			self.title = THEME3 % ADDONTITLE
-			self.msg   = "Currently no build installed from %s.\n\nSelect 'Build Menu' to install a %s Build or 'Ignore' to never see this message again.\n\nThank you for choosing %s." % (ADDONTITLE,BUILDERNAME, ADDONTITLE)
+			self.msg   = "Currently no build installed from %s.\n\n To install a %s Build click 'Open Wizard'. To Close the Wizard click 'Close'..\n\nThank you for choosing %s." % (ADDONTITLE,BUILDERNAME, ADDONTITLE)
 			self.msg   = THEME2 % self.msg
 
 		def onInit(self):
@@ -691,13 +691,13 @@ def firstRun():
 			self.getControl(self.image).setColorDiffuse('9FFFFFFF')
 			self.getControl(self.textbox).setText(self.msg)
 			self.getControl(self.titlebox).setLabel(self.title)
-			self.setFocusId(self.buildmenu)
+			self.setFocusId(self.ignore)
 		
 		def doBuildMenu(self):
 			wiz.log("[Check Updates] [User Selected: Open Build Menu] [Next Check: %s]" % str(NEXTCHECK), xbmc.LOGNOTICE)
 			wiz.setS('lastbuildcheck', str(NEXTCHECK))
 			self.close()
-			url = 'plugin://%s/?mode=builds' % ADDON_ID
+			url = 'plugin://plugin.program.DaOnlyWizard'
 			xbmc.executebuiltin('ActivateWindow(10025, "%s", return)' % url)
 		
 		def doIgnore(self):

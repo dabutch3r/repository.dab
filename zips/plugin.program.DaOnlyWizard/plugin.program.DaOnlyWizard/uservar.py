@@ -9,7 +9,7 @@ CACHEAGE       = 30
 
 ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
 ADDONTITLE     = '[COLOR blue][B]DaOnlyWizard[/B][/COLOR]'
-BUILDERNAME    = 'daonlywizard'
+BUILDERNAME    = 'DaOnlyWizard'
 #########################Make sure to change the repo to yours!!!!
 EXCLUDES       = [ADDON_ID, 'repository.dab', 'roms', 'My_Builds', 'backupdir']
 BUILDFILE      = 'http://www.dabutcher.org/tools/builds1.txt'
@@ -36,36 +36,36 @@ ART            = os.path.join(PATH, 'resources', 'art')
 # Only these colors avalable
 # white , blue , orange , yellow , red , purple , pink , lime , cyan, green
 #Button focus color
-FOCUS_BUTTON_COLOR = 'red'
-EXIT_BUTTON_COLOR = 'lime'
+FOCUS_BUTTON_COLOR = 'lime'
+EXIT_BUTTON_COLOR = 'red'
 #Highlight outline for lists
-HIGHLIGHT_LIST = 'red'
+HIGHLIGHT_LIST = 'lime'
 ##No TXT file Banner
-NO_TXT_FILE = 'pink'
+NO_TXT_FILE = 'blue'
 
 ############################################
 ############################################
 ### The full list of colors for below can found @ https://forum.kodi.tv/showthread.php?tid=210837
 
 #Top Main buttons
-MAIN_BUTTONS_TEXT = 'dodgerblue'
+MAIN_BUTTONS_TEXT = 'white'
 #All other buttons
-OTHER_BUTTONS_TEXT = 'gold'
+OTHER_BUTTONS_TEXT = 'white'
 #all list text color
 ##FYI any color placed in the txt file will overide this
-LIST_TEXT = 'gold'
+LIST_TEXT = 'white'
 
 
 #Description text title color
-DES_T_COLOR = 'dodgerblue'
+DES_T_COLOR = 'orange'
 #Description color
 DESCOLOR = 'white'
 
 #Wizard title name and verion color
-WIZTITLE = 'DaOnlyWizard  by   DaButcher'
-WIZTITLE_COLOR = 'red'
-VERTITLE_COLOR = 'dodgerblue'
-VER_NUMBER_COLOR = 'red'
+WIZTITLE = 'DaOnlyWizard  by  DaButcher'
+WIZTITLE_COLOR = 'darkred'
+VERTITLE_COLOR = 'white'
+VER_NUMBER_COLOR = 'darkred'
 ############################################################
 
 ## The colors and theme below is still used for the pop up dialogs

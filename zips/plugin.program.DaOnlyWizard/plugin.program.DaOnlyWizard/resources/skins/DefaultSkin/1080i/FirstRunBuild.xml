@@ -48,7 +48,7 @@
                 <height>60</height>
                 <font>font12</font>
                 <textcolor>FFF0F0F0</textcolor>
-                <label>Build Menu</label>
+                <label>Open Wizard</label>
                 <align>center</align>
                 <aligny>center</aligny>
                 <texturefocus colordiffuse="FF12B2E7">Button/testbuttonfo.png</texturefocus>
@@ -64,7 +64,7 @@
                 <font>font12</font>
                 <textcolor>FFF0F0F0</textcolor>
                 <textoffsetx>20</textoffsetx>
-                <label>Ignore</label>
+                <label>Close</label>
                 <align>center</align>
                 <aligny>center</aligny>
                 <texturefocus colordiffuse="FF12B2E7">Button/testbuttonfo.png</texturefocus>

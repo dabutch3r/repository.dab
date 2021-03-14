@@ -2732,6 +2732,7 @@ FBUTTON  = os.path.join(ART , '%s.png' % FOCUS_BUTTON_COLOR)
 LBUTTON  = os.path.join(ART , '%s.png' %  HIGHLIGHT_LIST)
 BUTTON   = os.path.join(ART , 'button.png')
 LISTBG   = os.path.join(ART , 'listbg.png')
+TOPPANEL = os.path.join(ART , 'toppanel.png')
 SPLASH   = os.path.join(ART , 'splash.jpg')
 SpeedBG  = os.path.join(ART , 'speedtest.jpg')
 MAINBG   = os.path.join(ART , 'main.jpg')
@@ -3329,25 +3330,25 @@ def BuildList():
 		buildinfobg.setVisible(True)
 		
 		PreviewButton = pyxbmct.Button('[COLOR %s][B]Video Preview[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(PreviewButton,20 , 20, 8, 8)
+		window.placeControl(PreviewButton,26 , 20, 9, 8)
 		window.connect(PreviewButton,lambda: buildVideo(Bname))
 		
 		InstallButton = pyxbmct.Button('[COLOR %s][B]Install[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(InstallButton,28 , 20, 8, 8)
+		window.placeControl(InstallButton,34 , 20, 9, 8)
 		window.connect(InstallButton, lambda: buildWizard(Bname,'normal'))
 		
 		FreshStartButton = pyxbmct.Button('[COLOR %s][B]Fresh Install[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(FreshStartButton,36 , 20, 8, 8)
+		window.placeControl(FreshStartButton,42 , 20, 9, 8)
 		window.connect(FreshStartButton,lambda: buildWizard(Bname,'fresh'))
 		
 		ThemeButton = pyxbmct.Button('[COLOR %s][B]Install Themes[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(ThemeButton,44 , 20, 8, 8)
+		window.placeControl(ThemeButton,50 , 20, 9, 8)
 		window.connect(ThemeButton,lambda: buildWizard(Bname,'theme'))
 		
 		buildthumb = pyxbmct.Image(ICON)
-		window.placeControl(buildthumb, 21, 30, 45, 19)
+		window.placeControl(buildthumb, 21, 29, 45, 19)
 		
-		buildlist = pyxbmct.List(buttonFocusTexture=LBUTTON)
+		buildlist = pyxbmct.List(buttonFocusTexture=LBUTTON, _itemTextXOffset=0, _itemTextYOffset=-3, _itemHeight=40)
 		window.placeControl(buildlist, 14, 1, 79, 15)
 		
 		buildtextbox = pyxbmct.Label('',textColor='0xFFFFFFFF')
@@ -3494,14 +3495,14 @@ def AddonList():
 		
 		#buttons/objects
 		InstallButtonA = pyxbmct.Button('[COLOR %s][B]Install[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(InstallButtonA,30 , 20, 9, 8)
+		window.placeControl(InstallButtonA,31 , 20, 9, 8)
 		
 		window.connect(InstallButtonA, lambda:AddonInstall(name))#addonInstaller(plugin, url))
 		
 		addthumb=pyxbmct.Image(ICON)
 		window.placeControl(addthumb, 31, 30, 45, 19)
 		
-		addonlist = pyxbmct.List(buttonFocusTexture=LBUTTON)
+		addonlist = pyxbmct.List(buttonFocusTexture=LBUTTON, _itemTextXOffset=0, _itemTextYOffset=-2, _itemHeight=40)
 		window.placeControl(addonlist, 24, 1, 79, 15)
 		
 		addtextbox   = pyxbmct.Label('',textColor='0xFFFFFFFF')
@@ -3564,13 +3565,13 @@ def APKList():
 		buildbgA.setVisible(True)
 		
 		InstallButtonAPK = pyxbmct.Button('[COLOR %s][B]Install[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(InstallButtonAPK,30 , 20, 9, 8)
+		window.placeControl(InstallButtonAPK,31 , 20, 9, 8)
 		window.connect(InstallButtonAPK, lambda:apkInstaller1(name, url))
 		
 		apkthumb=pyxbmct.Image(ICON)
 		window.placeControl(apkthumb, 31, 30, 45, 19)
 		
-		apklist = pyxbmct.List(buttonFocusTexture=LBUTTON)
+		apklist = pyxbmct.List(buttonFocusTexture=LBUTTON, _itemTextXOffset=0, _itemTextYOffset=-2, _itemHeight=40)
 		window.placeControl(apklist, 24, 1, 79, 15)
 		
 		apktextbox = pyxbmct.Label('',textColor='0xFFFFFFFF')
@@ -3629,10 +3630,10 @@ def EmuList():
 		buildbgA.setVisible(True)
 		
 		InstallButtonEMU = pyxbmct.Button('[COLOR %s][B]Install[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(InstallButtonEMU,30 , 20, 9, 8)
+		window.placeControl(InstallButtonEMU,31 , 20, 9, 8)
 		window.connect(InstallButtonEMU, lambda:apkInstaller1(name, url))
 		
-		emulist = pyxbmct.List(buttonFocusTexture=LBUTTON)
+		emulist = pyxbmct.List(buttonFocusTexture=LBUTTON, _itemTextXOffset=0, _itemTextYOffset=-2, _itemHeight=40)
 		window.placeControl(emulist, 24, 1, 79, 15)
 		
 		emuthumb=pyxbmct.Image(ICON)
@@ -3697,10 +3698,10 @@ def RomList():
 		buildbgA.setVisible(True)
 		
 		InstallButtonROM = pyxbmct.Button('[COLOR %s][B]Install[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-		window.placeControl(InstallButtonROM,30 , 20, 9, 8)
+		window.placeControl(InstallButtonROM,31 , 20, 9, 8)
 		window.connect(InstallButtonROM, lambda:UNZIPROM())
 		
-		romlist = pyxbmct.List(buttonFocusTexture=LBUTTON)
+		romlist = pyxbmct.List(buttonFocusTexture=LBUTTON, _itemTextXOffset=0, _itemTextYOffset=-2, _itemHeight=40)
 		window.placeControl(romlist, 24, 1, 79, 15)
 		
 		romthumb=pyxbmct.Image(ICON)
@@ -3810,24 +3811,24 @@ def Maint():
 	sysinfo_title =  pyxbmct.Label('[COLOR %s][B]SYSTEM INFO[/B][/COLOR]' % DES_T_COLOR)
 	window.placeControl(sysinfo_title, 12, 31, 10, 15)
 	version1 =  pyxbmct.Label('[COLOR %s]Version:[/COLOR] [COLOR %s]%s[/COLOR] - [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, codename, DESCOLOR, version))
-	window.placeControl(version1, 18, 37, 10, 15)
+	window.placeControl(version1, 17, 39, 10, 15)
 	store = pyxbmct.Label('[B][COLOR %s]Storage[/COLOR][/B]'% DESCOLOR)
-	window.placeControl(store, 23, 39, 10, 10)
+	window.placeControl(store, 22, 39, 10, 10)
 	rom_used=pyxbmct.Label('[COLOR %s]Used:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, storage_free))
-	window.placeControl(rom_used, 28, 39, 10, 10)
+	window.placeControl(rom_used, 27, 39, 10, 10)
 	rom_free=pyxbmct.Label('[COLOR %s]Free:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, storage_used))
 	window.placeControl(rom_free, 32, 39, 10, 10)
 	rom_total=pyxbmct.Label('[COLOR %s]Total:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, storage_total))
 	window.placeControl(rom_total, 37, 39, 10, 10)
 	mem = pyxbmct.Label('[B][COLOR %s]Memory[/COLOR][/B]' % DESCOLOR)
-	window.placeControl(mem, 43, 39, 10, 10)
+	window.placeControl(mem, 42, 39, 10, 10)
 	### Hello, how are you
 	ram_used=pyxbmct.Label('[COLOR %s]Used:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, ram_used))
-	window.placeControl(ram_used, 48, 39, 10, 10)
+	window.placeControl(ram_used, 47, 39, 10, 10)
 	ram_free=pyxbmct.Label('[COLOR %s]Free:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, ram_free))
-	window.placeControl(ram_free, 53, 39, 10, 10)
+	window.placeControl(ram_free, 52, 39, 10, 10)
 	ram_total=pyxbmct.Label('[COLOR %s]Total:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, ram_total))
-	window.placeControl(ram_total, 58, 39, 10, 10)
+	window.placeControl(ram_total, 57, 39, 10, 10)
 	
 	##addon info
 	
@@ -3839,7 +3840,7 @@ def Maint():
 	video=pyxbmct.Label('[COLOR %s]Video Addons:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, str(len(video))))
 	window.placeControl(video, 27, 22, 10, 10)
 	program=pyxbmct.Label('[COLOR %s]Program Addons:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, str(len(programs))))
-	window.placeControl(program, 33, 22, 10, 10)
+	window.placeControl(program, 32, 22, 10, 10)
 	music=pyxbmct.Label('[COLOR %s]Music Addons:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, str(len(music))))
 	window.placeControl(music, 37, 22, 10, 10)
 	picture=pyxbmct.Label('[COLOR %s]Picture Addons:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR, str(len(picture))))
@@ -3885,7 +3886,7 @@ def Maint():
 	
 	#maint lables#
 	TC = pyxbmct.Label('[COLOR %s]Size:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR,wiz.convertSize(totalsize)))
-	window.placeControl(TC, 80 , 21 ,  10, 9)
+	window.placeControl(TC, 90 , 21 ,  10, 9)
 	DC = pyxbmct.Label('[COLOR %s]Size:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR,wiz.convertSize(sizecache)))
 	window.placeControl(DC, 96 , 21 ,  10, 9)
 	DPK = pyxbmct.Label('[COLOR %s]Size:[/COLOR] [COLOR %s]%s[/COLOR]' % (DES_T_COLOR, DESCOLOR,wiz.convertSize(sizepack)))
@@ -3922,11 +3923,11 @@ def Maint():
 	window.placeControl(un_hide_net, 58, 10, 9, 8)
 	window.connect(un_hide_net, lambda: Un_Hide_Net())
 	
-	trigger_title =  pyxbmct.Label('[COLOR %s]Change pop-up trigger.[/COLOR]'% DES_T_COLOR)
-	window.placeControl(trigger_title, 72 , 30 , 1, 11)
+	trigger_title =  pyxbmct.Label('[COLOR %s]Change Pop-Up Trigger.[/COLOR]'% DES_T_COLOR)
+	window.placeControl(trigger_title, 72 , 31 , 1, 11)
 	
 	settings_button1 = pyxbmct.Button('[COLOR %s]Settings[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(settings_button1, 72 , 41 ,  9, 8)
+	window.placeControl(settings_button1, 72 , 42 ,  9, 8)
 	window.connect(settings_button1, lambda: wiz.openS('Maintenance'))
 
 
@@ -4031,13 +4032,13 @@ def BackRes():
 	
 	bakresbg.setVisible(True)
 	
-	last = str(FAVSsave) if not FAVSsave == '' else 'Favourites hasnt been saved yet.'
+	last = str(FAVSsave) if not FAVSsave == '' else " Favourites hasn't been saved yet."
 	#loc info#
 	
 	favs = pyxbmct.Label('[B][COLOR %s]Last Save:[/COLOR] [COLOR %s]%s[/COLOR][/B]' % (DES_T_COLOR, DESCOLOR,str(last)))
 	window.placeControl(favs, 14, 3, 10, 30)
 	
-	backuploc = pyxbmct.Label('[B][COLOR %s]Back-Up Location: [COLOR %s]%s[/COLOR][/B]' % (DES_T_COLOR, DESCOLOR,MYBUILDS))
+	backuploc = pyxbmct.Label('[B][COLOR %s]Back-Up Location:  [COLOR %s]%s[/COLOR][/B]' % (DES_T_COLOR, DESCOLOR,MYBUILDS))
 	window.placeControl(backuploc, 22, 3, 10, 30)
 	
 	#backup#
@@ -4089,11 +4090,11 @@ def BackRes():
 	window.placeControl(delete_title, 54, 37, 10, 10)
 	
 	clearfav_button = pyxbmct.Button('[COLOR %s]Clear Favourites[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(clearfav_button, 64, 37, 10, 10)
+	window.placeControl(clearfav_button, 62, 37, 10, 10)
 	window.connect(clearfav_button,lambda: wiz.DELFAV())
 	
 	clear_backup_button = pyxbmct.Button('[COLOR %s]Clear Back-ups[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(clear_backup_button, 74, 37, 10, 10)
+	window.placeControl(clear_backup_button, 72, 37, 10, 10)
 	window.connect(clear_backup_button,lambda: wiz.cleanupBackup())
 	
 	#settings
@@ -4186,22 +4187,22 @@ def Tools():
 	
 	toolsbg.setVisible(True)
 	
-	Log_title = pyxbmct.Label('[B][COLOR %s]Logging Tools[/COLOR][/B]' % DES_T_COLOR)
-	window.placeControl(Log_title, 15, 4, 10, 10)
+	Log_title = pyxbmct.Label('[B][COLOR %s]Logging Tools:[/COLOR][/B]' % DES_T_COLOR)
+	window.placeControl(Log_title, 15, 6, 10, 11)
 	
 	Log_errors = pyxbmct.Label('[COLOR %s][B]Errors in Log:[/B][/COLOR] %s' % (OTHER_BUTTONS_TEXT, log_tools()))
-	window.placeControl(Log_errors, 22, 4, 10, 15)
+	window.placeControl(Log_errors, 49, 4, 10, 15)
 	## uhhh not here
 	view_error_button = pyxbmct.Button('[COLOR %s]View Errors[/COLOR]'% OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(view_error_button, 31, 4, 9, 9)
+	window.placeControl(view_error_button, 22, 3, 9, 11)
 	window.connect(view_error_button, lambda: errorChecking(log=None, count=None, last=None))
 	
 	full_log_button = pyxbmct.Button('[COLOR %s]View Full Log[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(full_log_button, 40, 4, 9, 9)
+	window.placeControl(full_log_button, 31, 3, 9, 11)
 	window.connect(full_log_button,lambda :LogViewer())
 	
 	upload_log_button = pyxbmct.Button('[COLOR %s]Upload Full Log[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(upload_log_button, 49, 4, 9, 9)
+	window.placeControl(upload_log_button, 40, 3, 9, 11)
 	window.connect(upload_log_button,lambda :uploadLog.Main())
 	
 	#Addon#
@@ -4221,50 +4222,50 @@ def Tools():
 	global Addon
 	
 	Addon = pyxbmct.Label('[B][COLOR %s]Addon Tools[/COLOR][/B]' % DES_T_COLOR)
-	window.placeControl(Addon, 69, 21, 9, 9)
+	window.placeControl(Addon, 69, 22, 9, 9)
 	#buttons#
 	scan = pyxbmct.Label('[B][COLOR %s]Scan For:[/COLOR][/B]' % DES_T_COLOR)
-	window.placeControl(scan, 75, 4, 9, 10)
+	window.placeControl(scan, 75, 6, 9, 10)
 	
 	checksources_button = pyxbmct.Button('[COLOR %s]Broken Sources[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(checksources_button, 82, 3, 9, 10)
+	window.placeControl(checksources_button, 82, 3, 9, 11)
 	window.connect(checksources_button,lambda: wiz.checkSources())
 	
 	checkrepos_button = pyxbmct.Button('[COLOR %s]Broken Repositories[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(checkrepos_button, 92, 3, 9, 10)
+	window.placeControl(checkrepos_button, 92, 3, 9, 11)
 	window.connect(checkrepos_button,lambda: wiz.checkRepos())
 	
 	fix = pyxbmct.Label('[B][COLOR %s]Force / Fix:[/COLOR][/B]' % DES_T_COLOR)
-	window.placeControl(fix, 75, 16, 9, 10)
+	window.placeControl(fix, 75, 17, 9, 10)
 	
 	forceupdate_button = pyxbmct.Button('[COLOR %s]Update Addons[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(forceupdate_button, 82, 15, 9, 9)
+	window.placeControl(forceupdate_button, 82, 14, 9, 11)
 	window.connect(forceupdate_button,lambda: wiz.forceUpdate())
 	
 	fixaddonupdate_button = pyxbmct.Button('[COLOR %s]Addons Not Updating[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(fixaddonupdate_button, 92, 15, 9, 9)
+	window.placeControl(fixaddonupdate_button, 92, 14, 9, 11)
 	window.connect(fixaddonupdate_button,lambda: fixaddonupdate)
 	### I see you looking
 	delet = pyxbmct.Label('[B][COLOR %s]Delete: [/COLOR][/B]' % DES_T_COLOR)
-	window.placeControl(delet, 75, 28, 9, 10)
+	window.placeControl(delet, 75, 29, 9, 10)
 	
 	removeaddons_button = pyxbmct.Button('[COLOR %s]Delete Selected Addons[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(removeaddons_button, 82, 26, 9, 9)
+	window.placeControl(removeaddons_button, 82, 25, 9, 11)
 	window.connect(removeaddons_button,lambda: removeAddonMenu)
 	
 	removeaddondata_all_button = pyxbmct.Button('[COLOR %s]All Addon Data[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(removeaddondata_all_button, 92, 26, 9, 9)
+	window.placeControl(removeaddondata_all_button, 92, 25, 9, 11)
 	window.connect(removeaddondata_all_button,lambda: removeAddonData('all'))
 	
 	delet1 = pyxbmct.Label('[B][COLOR %s]Delete: [/COLOR][/B]' % DES_T_COLOR)
-	window.placeControl(delet1, 75, 39, 9, 10)
+	window.placeControl(delet1, 75, 40, 9, 10)
 	
 	removeaddondata_u_button = pyxbmct.Button('[COLOR %s]Uninstalled Folders[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(removeaddondata_u_button, 82, 37, 9, 9)
+	window.placeControl(removeaddondata_u_button, 82, 36, 9, 11)
 	window.connect(removeaddondata_u_button,lambda: removeAddonData('uninstalled'))
 	
 	removeaddondata_e_button = pyxbmct.Button('[COLOR %s]Empty Folders[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(removeaddondata_e_button, 92, 37, 9, 9)
+	window.placeControl(removeaddondata_e_button, 92, 36, 9, 11)
 	window.connect(removeaddondata_e_button,lambda: removeAddonData('empty'))
 	
 	####White List###
@@ -4277,26 +4278,26 @@ def Tools():
 	
 	
 	WhiteList = pyxbmct.Label('[B][COLOR %s]White List Tools: [/COLOR][/B]' % DES_T_COLOR)
-	window.placeControl(WhiteList, 15, 36, 9, 9)
+	window.placeControl(WhiteList, 15, 38, 9, 9)
 	
 	whitelist_edit_button = pyxbmct.Button('[COLOR %s]WhiteList: Edit[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(whitelist_edit_button, 22, 36, 9, 9)
+	window.placeControl(whitelist_edit_button, 22, 36, 9, 11)
 	window.connect(whitelist_edit_button,lambda: wiz.whiteList('edit'))
 	
 	whitelist_view_button = pyxbmct.Button('[COLOR %s]WhiteList: View[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(whitelist_view_button, 31, 36, 9, 9)
+	window.placeControl(whitelist_view_button, 31, 36, 9, 11)
 	window.connect(whitelist_view_button,lambda: wiz.whiteList('view'))
 	
 	whitelist_clear_button = pyxbmct.Button('[COLOR %s]WhiteList: Clear[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(whitelist_clear_button, 40, 36, 9, 9)
+	window.placeControl(whitelist_clear_button, 40, 36, 9, 11)
 	window.connect(whitelist_clear_button,lambda: wiz.whiteList('clear'))
 	### It's not here
 	whitelist_import_button = pyxbmct.Button('[COLOR %s]WhiteList: Import[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(whitelist_import_button, 49, 36, 9, 9)
+	window.placeControl(whitelist_import_button, 49, 36, 9, 11)
 	window.connect(whitelist_import_button,lambda: wiz.whiteList('Import'))
 	
 	whitelist_export_button = pyxbmct.Button('[COLOR %s]WhiteList: Export[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(whitelist_export_button, 58, 36, 9, 9)
+	window.placeControl(whitelist_export_button, 58, 36, 9, 11)
 	window.connect(whitelist_export_button,lambda: wiz.whiteList('export'))
 	
 	########  Advanced ########
@@ -4306,23 +4307,23 @@ def Tools():
 	global currentsettings_button
 	global removeadvanced_button
 	
-	Advan = pyxbmct.Label('[B][COLOR %s]Advanced Settings Tools[/COLOR][/B]'% DES_T_COLOR)
-	window.placeControl(Advan, 15, 20, 9, 13)
+	Advan = pyxbmct.Label('[B][COLOR %s]Advanced Settings Tools:[/COLOR][/B]'% DES_T_COLOR)
+	window.placeControl(Advan, 15, 21, 9, 13)
 	#buttons#
 	autoadvanced_buttonQ = pyxbmct.Button('[COLOR %s]Quick Config[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(autoadvanced_buttonQ, 22, 21, 9, 9)
+	window.placeControl(autoadvanced_buttonQ, 22, 20, 9, 11)
 	window.connect(autoadvanced_buttonQ,lambda: notify.autoConfig2())
 	
 	autoadvanced_button = pyxbmct.Button('[COLOR %s]Full Config[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(autoadvanced_button, 31, 21, 9, 9)
+	window.placeControl(autoadvanced_button, 31, 20, 9, 11)
 	window.connect(autoadvanced_button,lambda: notify.autoConfig())
 	##Wait it's here!!
 	currentsettings_button = pyxbmct.Button('[COLOR %s]Current Settings[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(currentsettings_button, 40, 21, 9, 9)
+	window.placeControl(currentsettings_button, 40, 20, 9, 11)
 	window.connect(currentsettings_button,lambda: viewAdvanced())
 	
 	removeadvanced_button = pyxbmct.Button('[COLOR %s]Delete Settings[/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-	window.placeControl(removeadvanced_button, 49, 21, 9, 9)
+	window.placeControl(removeadvanced_button, 49, 20, 9, 11)
 	window.connect(removeadvanced_button,lambda: removeAdvanced())
 
 	
@@ -4463,19 +4464,19 @@ def Installables():
 	buildbgA.setVisible(True)
 
 	AddonButton = pyxbmct.Button('[COLOR %s][B]Addons[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=EXIT,noFocusTexture=BUTTON)
-	window.placeControl(AddonButton,12 , 9,  7, 8)
+	window.placeControl(AddonButton,10 , 9,  10, 8)
 	window.connect(AddonButton, lambda: AddonList())
 	
 	APKButton = pyxbmct.Button('[COLOR %s][B]APKs[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=EXIT,noFocusTexture=BUTTON)
-	window.placeControl(APKButton,12 , 17 ,  7, 8)
+	window.placeControl(APKButton,10 , 17 ,  10, 8)
 	window.connect(APKButton, lambda: APKList())
 	
 	ROMButton = pyxbmct.Button('[COLOR %s][B]Retro Roms[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=EXIT,noFocusTexture=BUTTON)
-	window.placeControl(ROMButton,12 , 25 ,  7, 8)
+	window.placeControl(ROMButton,10 , 25 ,  10, 8)
 	window.connect(ROMButton, lambda: RomList())
 	
 	EmuButton = pyxbmct.Button('[COLOR %s][B]Emulators[/B][/COLOR]' % OTHER_BUTTONS_TEXT,focusTexture=EXIT,noFocusTexture=BUTTON)
-	window.placeControl(EmuButton,12 , 33 ,  7, 8)
+	window.placeControl(EmuButton,10 , 33 ,  10, 8)
 	window.connect(EmuButton, lambda: EmuList())
 	
 	InstallablesButton.controlDown(AddonButton)
@@ -4534,7 +4535,7 @@ listbg = pyxbmct.Image(LISTBG)
 window.placeControl(listbg, 10, 0, 80, 17)
 
 buildbg = pyxbmct.Image(LISTBG)
-window.placeControl(buildbg, 10, 16, 80, 35)
+window.placeControl(buildbg, 10, 16, 80, 34)
 
 buildinfobg = pyxbmct.Image(LISTBG)
 window.placeControl(buildinfobg, 88, 0, 23, 50)
@@ -4546,7 +4547,7 @@ buildbgA = pyxbmct.Image(LISTBG)
 window.placeControl(buildbgA, 20, 16, 80, 35)
 
 maintbg = pyxbmct.Image(LISTBG)
-window.placeControl(maintbg, 70, 19, 40, 32)
+window.placeControl(maintbg, 68, 19, 41, 32)
 
 sysinfobg = pyxbmct.Image(LISTBG)
 window.placeControl(sysinfobg, 10, 19, 60, 32)
@@ -4555,7 +4556,7 @@ netinfobg = pyxbmct.Image(LISTBG)
 window.placeControl(netinfobg, 10, 0, 60, 20)
 
 speedthumb = pyxbmct.Image(SpeedBG)
-window.placeControl(speedthumb, 70, 0, 40, 20)
+window.placeControl(speedthumb, 68, 0, 41, 20)
 
 splash = pyxbmct.Image(SPLASH)
 window.placeControl(splash , 10, 1, 100, 48)
@@ -4566,14 +4567,14 @@ window.placeControl(bakresbg , 10, 1, 100, 48)
 toolsbg = pyxbmct.Image(LISTBG)
 window.placeControl(toolsbg , 10, 1, 100, 48)
 
-wizinfogb = pyxbmct.Image(LISTBG)
-window.placeControl(wizinfogb, -6, 9, 9, 32)
+wizinfogb = pyxbmct.Image(TOPPANEL)
+window.placeControl(wizinfogb, -8, 9, 9, 32)
 
 wiz_title =  pyxbmct.Label('[COLOR %s][B]%s[/B][/COLOR]' % (uservar.WIZTITLE_COLOR ,uservar.WIZTITLE))
-window.placeControl(wiz_title, -5, 11, 7, 20)
+window.placeControl(wiz_title, -7, 11, 7, 20)
 
 wiz_ver =  pyxbmct.Label('[COLOR %s]Version: [COLOR %s][B]%s[/B][/COLOR]' % (uservar.VERTITLE_COLOR,uservar.VER_NUMBER_COLOR,VERSION))
-window.placeControl(wiz_ver, -5, 31, 7, 10)
+window.placeControl(wiz_ver, -7, 31, 7, 10)
 
 no_txt = pyxbmct.Image(NOTXT)
 window.placeControl(no_txt, 23, 8, 80, 35)
@@ -4591,27 +4592,27 @@ global Toolbox
 
 #buttons/objects
 BuildsButton= pyxbmct.Button('[COLOR %s][B]Builds[/B][/COLOR]' % MAIN_BUTTONS_TEXT, focusTexture=FBUTTON,noFocusTexture=BUTTON)
-window.placeControl(BuildsButton,-2 , 1 , 13, 8)
+window.placeControl(BuildsButton,0 , 1 , 11, 8)
 window.connect(BuildsButton, lambda: BuildList())
 
 MaintButton = pyxbmct.Button('[COLOR %s][B]Maintenance[/B][/COLOR]' % MAIN_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-window.placeControl(MaintButton,2 , 9 , 9, 8)
+window.placeControl(MaintButton,0 , 9 , 11, 8)
 window.connect(MaintButton, lambda: Maint())
 
 BackResButton = pyxbmct.Button('[COLOR %s][B]Backup/Restore[/B][/COLOR]' % MAIN_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-window.placeControl(BackResButton,2 , 17, 9, 8)
+window.placeControl(BackResButton,0 , 17, 11, 8)
 window.connect(BackResButton, lambda: BackRes())
 
 ToolsButton = pyxbmct.Button('[COLOR %s][B]Tools[/B][/COLOR]' % MAIN_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-window.placeControl(ToolsButton,2 , 25, 9, 8)
+window.placeControl(ToolsButton,0 , 25, 11, 8)
 window.connect(ToolsButton, lambda: Tools())
 
 InstallablesButton = pyxbmct.Button('[COLOR %s][B]Installables[/B][/COLOR]' % MAIN_BUTTONS_TEXT,focusTexture=FBUTTON,noFocusTexture=BUTTON)
-window.placeControl(InstallablesButton,2 , 33, 9, 8)
+window.placeControl(InstallablesButton,0 , 33, 11, 8)
 window.connect(InstallablesButton, lambda: Installables())
 
 CloseButton = pyxbmct.Button('[COLOR %s][B]Close[/B][/COLOR]' % MAIN_BUTTONS_TEXT,focusTexture=EXIT,noFocusTexture=BUTTON)
-window.placeControl(CloseButton,-2 , 41,13, 8)
+window.placeControl(CloseButton,0 , 41, 11, 8)
 window.connect(CloseButton, window.close)
 
 BuildsButton.controlRight(MaintButton)
